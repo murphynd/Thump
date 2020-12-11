@@ -1,0 +1,17 @@
+.drumMachine .button {
+  width: 86px;
+  padding: 8px 0;
+  background: #d7d4dd;
+}
+.drumMachine {
+  background-color: aliceblue;
+}
+/* .pad {
+  display: flex;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  flex: 1 0 calc(33.333% -20px);
+  background: radial-gradient(lightgrey, rgb(24, 23, 23));
+} */

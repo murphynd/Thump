@@ -1,23 +1,37 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import * as Tone from "tone";
-const synth = new Tone.MembraneSynth().toMaster();
+import "../drumMachine/drumMachine.css";
 
-function playSynth() {
-  synth.triggerAttackRelease("C2", "8n");
-}
+function DrumMachine() {
+  function startSeq() {
+    Tone.start();
+    Tone.Transport.start();
+  }
 
-const DrumMachine = () => {
+  function stopSeq() {
+    Tone.Transport.stop();
+  }
+
   return (
     <React.Fragment>
-      <section className="drumkit">
-        <div className="pad"></div>
-        <div className="pad"></div>
-        <div className="pad"></div>
-        <div className="pad"></div>
-        <div className="pad"></div>
-        <div className="pad"></div>
-      </section>
+      <div className="drumMachine">
+        <button onClick={startSeq}>start</button>
+        <button onClick={stopSeq}>stop</button>
+      </div>
     </React.Fragment>
   );
-};
+}
 export default DrumMachine;
+
+// var startSound = document.querySelector
+// useEffect(() => {
+//  document.querySelector("button")?.addEventListener("click", async () => {
+//     await Tone.start();
+//     console.log("audio is ready");
+//   });
+// }, [start]);
+
+// const synth = new Tone.MembraneSynth().toMaster();
+// const [start, setStart] = {
+//   startButton: document.querySelector,
+// };

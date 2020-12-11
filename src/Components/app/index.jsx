@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../app/App.css";
 import firebase from "../../firebase";
-import useLogin from "../../hooks/use-login";
 import Login from "../login";
 import Hero from "../Hero";
 

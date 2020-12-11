@@ -1,25 +1,18 @@
 import React from "react";
 import DrumMachine from "../drumMachine";
-import * as Tone from "tone";
-
-const synth = new Tone.MembraneSynth().toMaster();
-
-function playSynth() {
-  synth.triggerAttackRelease("C2", "8n");
-}
+import "../Hero/Hero.css";
 
 const Hero = ({ handleLogout }) => {
   return (
-    <section className="hero">
-      <nav>
-        <h2>Welcome</h2>
-        <button onClick={handleLogout}>Logout</button>
-      </nav>
-      <button id="button" onClick={playSynth}>
-        start
-      </button>
+    <React.Fragment>
+      <section className="hero">
+        <nav>
+          <h2>Welcome</h2>
+          <button onClick={handleLogout}>Logout</button>
+        </nav>
+      </section>
       <DrumMachine />
-    </section>
+    </React.Fragment>
   );
 };
 export default Hero;
