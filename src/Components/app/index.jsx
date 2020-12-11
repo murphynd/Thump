@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import "./App.css";
-import firebase from "./firebase";
-import Login from "./Login";
-import Hero from "./hero.jsx";
+import "../app/App.css";
+import firebase from "../../firebase";
+import useLogin from "../../hooks/use-login";
+import Login from "../login";
+import Hero from "../Hero";
 
 const App = () => {
   const [user, setUser] = useState("");
@@ -79,25 +80,27 @@ const App = () => {
   }, []);
 
   return (
-    <div className="App">
-      {user ? (
-        <Hero handleLogout={handleLogout} />
-      ) : (
-        <Login
-          email={email}
-          setEmail={setEmail}
-          password={password}
-          setPassword={setPassword}
-          handleLogin={handleLogin}
-          handleSignup={handleSignup}
-          hasAccount={hasAccount}
-          setHasAccount={setHasAccount}
-          emailError={emailError}
-          passwordError={passwordError}
-          hasAccount={hasAccount}
-        />
-      )}
-    </div>
+    <React.Fragment>
+      <div className="App">
+        {user ? (
+          <Hero handleLogout={handleLogout} />
+        ) : (
+          <Login
+            email={email}
+            setEmail={setEmail}
+            password={password}
+            setPassword={setPassword}
+            handleLogin={handleLogin}
+            handleSignup={handleSignup}
+            hasAccount={hasAccount}
+            setHasAccount={setHasAccount}
+            emailError={emailError}
+            passwordError={passwordError}
+            hasAccount={hasAccount}
+          />
+        )}
+      </div>
+    </React.Fragment>
   );
 };
 

@@ -120,3 +120,18 @@ button {
   padding: 8px 0;
   background: #3a2b58;
 }
+.drumkit {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 100vh;
+}
+.pad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  flex: 1 0 calc(33.333% -20px);
+  background-color: radial-gradient(lightgrey, rgb(24, 23, 23));
+  border-radius: 10 px;
+}
