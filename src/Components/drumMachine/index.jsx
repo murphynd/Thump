@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import * as Tone from "tone";
 import "../drumMachine/drumMachine.css";
+import p5 from "..p5";
 
 function DrumMachine() {
   function startSeq() {

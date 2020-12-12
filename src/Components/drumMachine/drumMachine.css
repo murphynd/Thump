@@ -6,6 +6,10 @@
 .drumMachine {
   background-color: aliceblue;
 }
+
+canvas {
+  display: block;
+}
 /* .pad {
   display: flex;
   border-radius: 10px;

@@ -18,6 +18,7 @@ const Login = (props) => {
   return (
     <section className="login">
       <div className="loginContainer">
+        <lable>Thump</lable>
         <label>Username</label>
         <input
           type="text"
